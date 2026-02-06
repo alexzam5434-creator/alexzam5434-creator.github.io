@@ -729,3 +729,22 @@ body {
     border: 1px solid #f5c542 !important;
   }
 }
+/* ===== DESKTOP FIX: SHOW CALL / TEXT LABEL ===== */
+@media (min-width: 769px) {
+  .navbar .nav-container .nav-links a.nav-cta,
+  .navbar .nav-container .nav-links a.nav-cta:link,
+  .navbar .nav-container .nav-links a.nav-cta:visited,
+  .navbar .nav-container .nav-links a.nav-cta:hover,
+  .navbar .nav-container .nav-links a.nav-cta:active,
+  .navbar .nav-container .nav-links a.nav-cta:focus {
+    background: transparent !important;   /* keeps your outlined look */
+    border: 1px solid #f5c542 !important;
+    color: #f5c542 !important;            /* makes the text visible */
+    -webkit-text-fill-color: #f5c542 !important;
+    text-decoration: none !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+}
