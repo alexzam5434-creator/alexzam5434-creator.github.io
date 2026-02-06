@@ -360,4 +360,38 @@ body {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 60px;
 }
+/* FAQ */
+.faq-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.faq-card h3 {
+  margin-bottom: 8px;
+}
+
+.faq-card p {
+  color: rgba(255,255,255,0.78);
+  font-size: 0.95rem;
+}
+
+/* Legal disclaimer */
+.legal-note {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
