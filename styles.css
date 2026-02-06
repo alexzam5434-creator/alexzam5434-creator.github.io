@@ -412,16 +412,18 @@ body {
   }
 }
 /* Gallery */
+/* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 14px;
   margin-top: 18px;
 }
 
 .gallery-thumb {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
   border-radius: 18px;
   cursor: pointer;
@@ -464,6 +466,8 @@ body {
   font-size: 36px;
   color: #fff;
   cursor: pointer;
+}
+
 }
 
 /* Responsive */
