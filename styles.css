@@ -764,3 +764,23 @@ a.nav-cta,
   white-space: nowrap !important;
   text-decoration: none !important;
 }
+/* ===== DESKTOP: MAKE NAV CTA SOLID + VISIBLE ===== */
+@media (min-width: 769px) {
+  .nav-links a.nav-cta,
+  .nav-links a.nav-cta:link,
+  .nav-links a.nav-cta:visited,
+  .nav-links a.nav-cta:hover,
+  .nav-links a.nav-cta:active,
+  .nav-links a.nav-cta:focus {
+    background-color: #f5c542 !important;
+    border: 1px solid #f5c542 !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    text-decoration: none !important;
+    padding: 8px 16px !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+}
