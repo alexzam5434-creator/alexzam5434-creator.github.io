@@ -686,3 +686,11 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 }
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links a:visited {
+  color: #ffffff;
+}
