@@ -694,3 +694,22 @@ body {
 .nav-links a:visited {
   color: #ffffff;
 }
+/* ===== FIX CALL/TEXT BUTTON VISIBILITY (MOBILE) ===== */
+.nav-links .nav-cta {
+  background-color: #f5c542;
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid #f5c542;
+  white-space: nowrap;
+}
+
+/* Mobile-specific safety */
+@media (max-width: 768px) {
+  .nav-links .nav-cta {
+    color: #000000 !important;
+    background-color: #f5c542 !important;
+    border: 1px solid #f5c542 !important;
+  }
+}
