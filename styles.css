@@ -674,26 +674,42 @@ body {
     text-decoration: none !important;
     -webkit-text-fill-color: #ffffff !important;
   }
-
-  /* Keep Call/Text button text black */
-  .navbar .nav-container .nav-links a.nav-cta {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
-  }
-
-  /* Remove iOS tap highlight */
-  .navbar .nav-container .nav-links a {
-    -webkit-tap-highlight-color: transparent;
-  }
-}
-.nav-links a {
+/* ===== NAV LINKS (NON-BUTTON) ===== */
+.navbar .nav-container .nav-links a:not(.nav-cta),
+.navbar .nav-container .nav-links a:not(.nav-cta):link,
+.navbar .nav-container .nav-links a:not(.nav-cta):visited,
+.navbar .nav-container .nav-links a:not(.nav-cta):hover,
+.navbar .nav-container .nav-links a:not(.nav-cta):active,
+.navbar .nav-container .nav-links a:not(.nav-cta):focus {
   color: #ffffff;
+  text-decoration: none;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* ===== CALL / TEXT BUTTON ===== */
+.navbar .nav-container .nav-links a.nav-cta,
+.navbar .nav-container .nav-links a.nav-cta:link,
+.navbar .nav-container .nav-links a.nav-cta:visited,
+.navbar .nav-container .nav-links a.nav-cta:hover,
+.navbar .nav-container .nav-links a.nav-cta:active,
+.navbar .nav-container .nav-links a.nav-cta:focus {
+  background-color: #f5c542;
+  border: 1px solid #f5c542;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
   text-decoration: none;
 }
 
-.nav-links a:visited {
-  color: #ffffff;
+/* Remove iOS tap highlight */
+.navbar .nav-container .nav-links a {
+  -webkit-tap-highlight-color: transparent;
 }
+
+
 /* ===== FIX CALL/TEXT BUTTON VISIBILITY (MOBILE) ===== */
 .nav-links .nav-cta {
   background-color: #f5c542;
