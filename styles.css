@@ -578,3 +578,17 @@ body {
 .nav-links a:active {
   color: #f5c542;
 }
+/* ===== FORCE NAV LINK COLORS (desktop + mobile) ===== */
+.navbar .nav-links a,
+.navbar .nav-links a:visited,
+.navbar .nav-links a:active,
+.navbar .nav-links a:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #ffffff !important; /* helps on iOS */
+}
+
+.navbar .nav-links a:hover {
+  color: #f5c542 !important;
+  -webkit-text-fill-color: #f5c542 !important;
+}
