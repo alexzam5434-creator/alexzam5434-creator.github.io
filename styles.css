@@ -410,22 +410,30 @@ body {
   .mobile-cta {
     display: block;
     position: fixed;
-    bottom: 0;
+    bottom: env(safe-area-inset-bottom);
     left: 0;
     right: 0;
     z-index: 999;
-    background: rgba(0,0,0,0.9);
-    border-top: 1px solid rgba(255,255,255,0.1);
+
+    background: rgba(0,0,0,0.85);
+    padding: 10px 14px;
   }
 
   .mobile-cta a {
     display: block;
-    padding: 16px;
     text-align: center;
-    font-weight: 800;
-    color: #000;
-    background: linear-gradient(135deg, #d4af37, #b8962e);
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    color: #d4af37;
+    background: transparent;
+    border: 1px solid rgba(212,175,55,0.6);
+    border-radius: 999px;
+    padding: 12px 0;
     text-decoration: none;
+  }
+}
+
   }
 
   /* Prevent content from hiding behind the bar */
