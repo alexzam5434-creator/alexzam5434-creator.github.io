@@ -622,3 +622,20 @@ body {
   color: #f5c542 !important;
   -webkit-text-fill-color: #f5c542 !important;
 }
+/* ===== FORCE NAV LINK COLOR (OVERRIDE EVERYTHING) ===== */
+.navbar .nav-container .nav-links a,
+.navbar .nav-container .nav-links a:link,
+.navbar .nav-container .nav-links a:visited,
+.navbar .nav-container .nav-links a:hover,
+.navbar .nav-container .nav-links a:active,
+.navbar .nav-container .nav-links a:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Keep your gold button */
+.navbar .nav-container .nav-links a.nav-cta {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
