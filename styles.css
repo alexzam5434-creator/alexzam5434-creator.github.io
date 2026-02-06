@@ -639,3 +639,50 @@ body {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
 }
+/* ===== MOBILE NAV: FORCE SIDEWAYS + WHITE LINKS ===== */
+@media (max-width: 768px) {
+  .navbar .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .navbar .nav-container .logo {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 16px !important;
+  }
+
+  .navbar .nav-container .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;        /* keeps it sideways; wraps if tight */
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  /* Force white link colors on mobile */
+  .navbar .nav-container .nav-links a,
+  .navbar .nav-container .nav-links a:link,
+  .navbar .nav-container .nav-links a:visited,
+  .navbar .nav-container .nav-links a:hover,
+  .navbar .nav-container .nav-links a:active,
+  .navbar .nav-container .nav-links a:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Keep Call/Text button text black */
+  .navbar .nav-container .nav-links a.nav-cta {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  /* Remove iOS tap highlight */
+  .navbar .nav-container .nav-links a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
