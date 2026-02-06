@@ -235,4 +235,83 @@ body {
   .why-grid {
     grid-template-columns: 1fr;
   }
+}/* ✅ MOBILE FIXES */
+@media (max-width: 520px) {
+
+  /* NAV: stack + shrink so it doesn't collide */
+  .nav-container{
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo{
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a{
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .nav-cta{
+    padding: 8px 12px;
+    border-radius: 999px;
+  }
+
+  /* HERO: less empty + better spacing */
+  .hero{
+    height: 78vh;
+    padding: 28px 12px;
+  }
+
+  .hero h1{
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .hero p{
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  /* BUTTONS: full width and clean (no splitting) */
+  .hero-buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  /* PHONE NUMBER: stop iPhone blue underline look */
+  .phone{
+    font-size: 18px;
+    color: #d4af37;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  a[href^="tel"]{
+    color: #d4af37 !important;
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+  }
 }
+
