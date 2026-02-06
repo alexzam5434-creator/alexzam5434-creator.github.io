@@ -322,7 +322,13 @@ body {
     font-weight: 800;
     box-shadow: 0 6px 18px rgba(212,175,55,0.45);
   }
+}.btn-primary{
+  opacity: 1 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  text-shadow: none !important;
 }
+
 
 }
 
