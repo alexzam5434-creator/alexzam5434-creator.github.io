@@ -784,3 +784,24 @@ a.nav-cta,
     white-space: nowrap !important;
   }
 }
+/* ===== FORCE NAV CTA TEXT TO SHOW (DESKTOP + MOBILE) ===== */
+.navbar .nav-container .nav-links a.nav-cta {
+  background-color: #f5c542 !important;
+  border: 1px solid #f5c542 !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+
+.navbar .nav-container .nav-links a.nav-cta .nav-cta-text {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
