@@ -730,40 +730,26 @@ body {
   }
 }
 /* ===== DESKTOP FIX: SHOW CALL / TEXT LABEL ===== */
-@media (min-width: 769px) {
-  .navbar .nav-container .nav-links a.nav-cta,
-  .navbar .nav-container .nav-links a.nav-cta:link,
-  .navbar .nav-container .nav-links a.nav-cta:visited,
-  .navbar .nav-container .nav-links a.nav-cta:hover,
-  .navbar .nav-container .nav-links a.nav-cta:active,
-  .navbar .nav-container .nav-links a.nav-cta:focus {
-    background: transparent !important;   /* keeps your outlined look */
-    border: 1px solid #f5c542 !important;
-    color: #f5c542 !important;            /* makes the text visible */
-    -webkit-text-fill-color: #f5c542 !important;
-    text-decoration: none !important;
-    padding: 6px 14px !important;
-    border-radius: 999px !important;
-    font-weight: 700 !important;
-    white-space: nowrap !important;
-  }
+/* ===== NAV CALL / TEXT CTA (MATCH SITE GOLD) ===== */
+.nav-links a.nav-cta {
+  background-color: #d4af37;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border: 1px solid #d4af37;
 }
-/* ===== BULLETPROOF NAV CTA (FORCE TEXT TO SHOW) ===== */
-a.nav-cta,
-.nav-cta {
-  color: #f5c542 !important;
-  -webkit-text-fill-color: #f5c542 !important;
-  background: transparent !important;
-  border: 1px solid #f5c542 !important;
-  padding: 6px 14px !important;
-  border-radius: 999px !important;
-  font-weight: 700 !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  white-space: nowrap !important;
-  text-decoration: none !important;
+
+.nav-links a.nav-cta:hover {
+  background-color: #c9a633;
+  border-color: #c9a633;
+  color: #000;
 }
+
 /* ===== DESKTOP: MAKE NAV CTA SOLID + VISIBLE ===== */
 @media (min-width: 769px) {
   .nav-links a.nav-cta,
