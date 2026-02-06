@@ -539,4 +539,19 @@ body {
     display: none;
   }
 }
+.footer-social {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+}
+
+.footer-social a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
 
