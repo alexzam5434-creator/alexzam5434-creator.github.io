@@ -312,6 +312,17 @@ body {
     color: #d4af37 !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;
+  }/* 🔥 FIX FAINT CALL BUTTON ON MOBILE */
+@media (max-width: 520px) {
+  .btn-primary {
+    opacity: 1 !important;
+    filter: none !important;
+    background: linear-gradient(135deg, #d4af37, #b8962e) !important;
+    color: #000 !important;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(212,175,55,0.45);
   }
+}
+
 }
 
