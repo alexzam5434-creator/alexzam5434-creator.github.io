@@ -247,9 +247,74 @@
   <p class="cta-sub">
     Appointment-only • Drop-off service • Most vehicles take 3–4 hours depending on window count
   </p>
-  <a href="tel:9512306935" class="btn-primary big">
-    Call / Text to Schedule
-  </a>
+ <form
+  action="https://formspree.io/f/xqedkand"
+  method="POST"
+  id="contact-form"
+>
+  <input type="hidden" name="_subject" value="New Tint Quote Request" />
+
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Full Name" required>
+  </div>
+
+  <div class="form-group">
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+  </div>
+
+  <div class="form-row">
+    <input type="number" name="year" placeholder="Year" required>
+    <input type="text" name="make" placeholder="Make" required>
+    <input type="text" name="model" placeholder="Model" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="windows" placeholder="Which windows would you like tinted?" required>
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" placeholder="Additional details (optional)"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Preferred response method:</label>
+    <select name="contact_preference" required>
+      <option value="">Select one</option>
+      <option value="Text">Text</option>
+      <option value="Phone Call">Phone Call</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn-primary big">Submit Request</button>
+
+  <!-- Success message -->
+  <p id="form-success" style="display:none; margin-top:16px; color:#d4af37; font-weight:700;">
+    ✅ Thanks! We’ll be in contact shortly.
+  </p>
+</form>
+<script>
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("form-success");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      form.reset();
+      successMessage.style.display = "block";
+    }
+  });
+</script>
+
 </section>
 
 
