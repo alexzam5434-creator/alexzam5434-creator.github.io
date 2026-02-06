@@ -637,3 +637,66 @@ body {
 .navbar .nav-links a {
   -webkit-tap-highlight-color: transparent;
 }
+/* ===== Contact Form (match site theme) ===== */
+#contact form {
+  max-width: 520px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.form-group,
+.form-row-3 {
+  margin-bottom: 14px;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+  width: 100%;
+  background: #0f0f0f;
+  border: 1px solid rgba(212,175,55,0.40);
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: rgba(255,255,255,0.55);
+}
+
+#contact textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* 3-column row: Year / Make / Model */
+.form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Mobile: stack the 3 fields */
+@media (max-width: 600px) {
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dropdown label */
+#contact label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Submit button already uses your .btn-primary.big style,
+   but ensure it centers nicely */
+#contact button[type="submit"] {
+  display: inline-block;
+  margin-top: 8px;
+}
