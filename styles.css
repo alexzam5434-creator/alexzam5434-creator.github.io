@@ -561,3 +561,20 @@ body {
   cursor: pointer;
 }
 
+/* ===== FIX BLUE NAV LINKS ===== */
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links a:visited {
+  color: #ffffff;
+}
+
+.nav-links a:hover {
+  color: #f5c542;
+}
+
+.nav-links a:active {
+  color: #f5c542;
+}
