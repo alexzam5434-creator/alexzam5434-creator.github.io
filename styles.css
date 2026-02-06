@@ -592,3 +592,33 @@ body {
   color: #f5c542 !important;
   -webkit-text-fill-color: #f5c542 !important;
 }
+/* ===== MOBILE NAV FIX ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Force horizontal layout on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
+/* Kill blue link color everywhere */
+.navbar .nav-links a,
+.navbar .nav-links a:visited,
+.navbar .nav-links a:active,
+.navbar .nav-links a:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.navbar .nav-links a:hover {
+  color: #f5c542 !important;
+  -webkit-text-fill-color: #f5c542 !important;
+}
