@@ -391,9 +391,48 @@
     history.replaceState(null, null, ' ');
   }
 </script>
+</script>   <!-- this is your existing script -->
+
+<!-- 🔽 PASTE THE TRACKING SCRIPT RIGHT HERE (line ~393) 🔽 -->
+<script>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+
+      const href = (a.getAttribute('href') || '').trim();
+
+      if (href.startsWith('tel:')) {
+        gtag('event', 'call_click', {
+          link_url: href,
+          link_text: a.textContent?.trim()
+        });
+      }
+
+      if (href.startsWith('sms:')) {
+        gtag('event', 'text_click', {
+          link_url: href,
+          link_text: a.textContent?.trim()
+        });
+      }
+
+      if (href === '#contact') {
+        gtag('event', 'quote_click', {
+          link_text: a.textContent?.trim()
+        });
+      }
+    }, true);
+  })();
+</script>
+<!-- 🔼 END tracking script 🔼 -->
 
 </body>
 </html>
 
 </body>
 </html>
+
+
