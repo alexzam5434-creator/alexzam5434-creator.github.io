@@ -450,13 +450,10 @@
     }
 
     // Look for ANY element on the page that contains the text "Form submitted"
-    function checkForSuccessText() {
+   function checkForSuccessText() {
   const bodyText = document.body ? document.body.innerText : "";
 
-  if (
-    bodyText.includes("Thanks! We'll be in contact shortly.") ||
-    bodyText.includes("Thanks! We’ll be in contact shortly.")
-  ) {
+  if (/Thanks!\s*We.?ll be in contact shortly\./i.test(bodyText)) {
     fireLead();
   }
 }
