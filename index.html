@@ -429,7 +429,7 @@
 </script>
 <!-- 🔼 END tracking script 🔼 -->
 
- <script>
+<script>
 (function () {
   let fired = false;
 
@@ -449,8 +449,18 @@
     }
   }
 
+  // 1) Try native submit
   document.addEventListener("submit", function () {
     fireLead();
+  }, true);
+
+  // 2) Fallback: button click
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest('button[type="submit"], input[type="submit"], button');
+    if (!btn) return;
+
+    const txt = (btn.innerText || btn.value || "").toLowerCase();
+    if (txt.includes("submit")) fireLead();
   }, true);
 
 })();
