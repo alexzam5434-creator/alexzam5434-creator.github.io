@@ -428,41 +428,43 @@
   })();
 </script>
 <!-- 🔼 END tracking script 🔼 -->
-<script>
-  // Fires GA4 event when your success message appears ("Form submitted")
-  (function () {
-    let fired = false;
 
-    function fireLead() {
-      if (fired) return;
-      fired = true;
+  <script>
+(function () {
+  let fired = false;
 
-      if (typeof gtag === "function") {
-        gtag("event", "generate_lead", {
-          event_category: "form",
-          event_label: "quote_request",
-          value: 1
-        });
-        console.log("✅ GA4 lead fired: generate_lead");
-      } else {
-        console.log("❌ gtag not found");
-      }
+  function fireLead() {
+    if (fired) return;
+    fired = true;
+
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", {
+        event_category: "form",
+        event_label: "quote_request",
+        value: 1
+      });
+      console.log("✅ GA4 lead fired: generate_lead");
+    } else {
+      console.log("❌ gtag not found");
     }
+  }
 
-    // Look for ANY element on the page that contains the text "Form submitted"
-   function checkForSuccessText() {
-  const bodyText = document.body ? document.body.innerText : "";
+  function checkForSuccessText() {
+  const bodyText = (document.body?.innerText || "").toLowerCase();
 
-  if (/Thanks!\s*We.?ll be in contact shortly\./i.test(bodyText)) {
+  if (
+    bodyText.includes("thanks!") &&
+    bodyText.includes("be in contact shortly")
+  ) {
     fireLead();
   }
 }
-    // Check now + keep watching for changes
-    checkForSuccessText();
 
-    const obs = new MutationObserver(checkForSuccessText);
-    obs.observe(document.body, { childList: true, subtree: true, characterData: true });
-  })();
+  checkForSuccessText();
+
+  const obs = new MutationObserver(checkForSuccessText);
+  obs.observe(document.body, { childList: true, subtree: true, characterData: true });
+})();
 </script>
 </body>
 </html>
