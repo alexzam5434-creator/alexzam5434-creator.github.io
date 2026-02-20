@@ -429,7 +429,7 @@
 </script>
 <!-- 🔼 END tracking script 🔼 -->
 
-  <script>
+ <script>
 (function () {
   let fired = false;
 
@@ -449,21 +449,10 @@
     }
   }
 
-  function checkForSuccessText() {
-  const bodyText = (document.body?.innerText || "").toLowerCase();
-
-  if (
-    bodyText.includes("thanks!") &&
-    bodyText.includes("be in contact shortly")
-  ) {
+  document.addEventListener("submit", function () {
     fireLead();
-  }
-}
+  }, true);
 
-  checkForSuccessText();
-
-  const obs = new MutationObserver(checkForSuccessText);
-  obs.observe(document.body, { childList: true, subtree: true, characterData: true });
 })();
 </script>
 </body>
